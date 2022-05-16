@@ -1,5 +1,7 @@
-from djitellopy import Tello as tello
+from djitellopy import Tello 
 import cv2
+
+tello = Tello()
 
 tello.connect()
 #set at right height
