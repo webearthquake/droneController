@@ -3,15 +3,7 @@ import cv2
 
 tello = Tello()
 tello.connect()
-tello.streamon()
-#stream camrea to screen
-while True:
-    read = tello.get_frame_read()
-    f = read.frame
-    f = cv2.resize(f, (320, 240))
-    cv2.imshow('Livefeed', f)
-    cv2.waitKey(1)
-#set at right height
+
 tello.takeoff()
 tello.move_up(100)
 #start forever loop
